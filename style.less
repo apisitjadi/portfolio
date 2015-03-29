@@ -1,118 +1,102 @@
-@import url(http://fonts.googleapis.com/css?family=Lily+Script+One);
-@import url(http://fonts.googleapis.com/css?family=Bangers);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@screen-xs-min: 757px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
 
 html, body {
   margin: 0px;
+  height: 100%;
+  width: 100%;
   background-color: #ECF0F1;
 }
 
-a:link {
-    color: white;
-}
-a:visited {
-    color: white;
-}
-a:hover {
-    color: white;
-}
-a:active {
-    color: white;
+#container {
+	padding: 0px;
 }
 
-/*.side-bar {
-	width: 160px;
+.side-left {
+	overflow: hidden;
+	background-image: url(/doi-pui.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #555;
+
 	height: 100%;
-	background-color: #1ABC9C;
-}*/
-
-@media screen and (max-width: 360px){
-	body {
-		/*background-color: yellow;*/
+	.img-bg {
+		/*position: absolute;*/
+		left: -50%;
+		height:100%;
+       	max-height:100%;;
+		opacity: 0.2;		
 	}
+}
 
-	.side-bar {
-		position: absolute;
-		width: 100%;
-		height: 270px;
-		overflow: hidden;
-		background-color: #C7EAE2; 
-
-			img {
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 0;
-				width: 100%;
-				opacity: 0.2;
-			}
-		/*background-image: url();*/
-			.wrap-pic-logo {
-				position: relative;
-				margin-top: 4%;
-				width: 100%;
-				height: auto;				
-				/*background-color: blue;*/
-					.pic-logo {
-						position: relative;
-						left: 50%;
-						margin-left: -70px;
-						width: 140px;
-						height: 140px;
-						/*background-color: red;*/
-						img {
-							height: 140px;
-							/*border: 6px solid #1ABC9C;*/
-	    					border-radius: 50%;	
-	    					opacity: 1.0;	
-	    					box-shadow: 1px 1px 15px #000;				
-						}
-					}					
-			}
-			.wrap-text-logo {
-				position: relative;
-				width: 100%;
-				height: 45%;
-				/*background-color: green;*/
-				.text-line-1 {
-					position: relative;
-					margin-top: 5px;
-					float: left;
+.wrap-pic-logo {
+	position: relative;
+	width: 100%;
+	height: auto;				
+	/*background-color: blue;*/
+		.pic-logo {
+			position: relative;
+			margin-top: 25px;
+			left: 50%;
+			margin-left: -70px;
+			width: 140px;
+			/*background-color: red;*/
+				img {
 					width: 100%;
-					height: 48px;
-					/*background-color: red;*/
-					line-height: 48px;
-					text-align: center;
-					font-size: 2.5em;
-					font-family: 'Lily Script One', cursive;
-					color: #1ABC9C;
-					text-shadow: 2px 2px 4px #000;
-						span {
-							cursor: pointer;
-						}
+					/*border: 6px solid #1ABC9C;*/
+    				border-radius: 50%;	
+    				opacity: 1.0;	
+    				/*box-shadow: 1px 1px 1px black;				*/
 				}
-				.text-line-2 {
-					.text-line-1;
-					margin-top: 0px;
-					/*background-color: yellow;*/
-					float: left;	
-						a {
-							i {
-								color: white;
-							}
-						}			
-				}
-			}
-	}
+		}					
 }
 
-/*@media screen and (min-width: 768px) and (max-width: 1023px) {
-	body {
-		background-color: red;
-	}
+.wrap-text-logo {
+	position: relative;
+	width: 100%;
+	margin-top: 15px;
+	height: auto;				
+	/*background-color: green;*/
+
+	font-weight: bold;
+	color: #2C3E50;
+	text-align: center;
+	font-size: 2.5em;
+	font-family: 'Pacifico', cursive;
+	/*text-shadow: 1px 1px 20px #555;*/
 }
- 
-@media screen and (min-width: 1024px) {
-	body {
-		background-color: blue;
-	}
-}*/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: @screen-xs-min) {  
+/*	.side-left {
+		.img-bg {
+			left: 0px;	
+		}
+	}*/
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {  
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {  
+	/*.wrap-pic-logo {
+		.pic-logo {
+			left: 50%;
+			margin-left: -17.5%;
+			width: 80%;
+		}
+	}*/
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {  
+
+}
