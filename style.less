@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
-@screen-xs-min: 757px;
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@screen-xs-min: 767px;
 @screen-sm-min: 768px;
 @screen-md-min: 992px;
 @screen-lg-min: 1200px;
@@ -9,7 +10,24 @@ html, body {
   margin: 0px;
   height: 100%;
   width: 100%;
-  background-color: #ECF0F1;
+  background-color: #FFFFFF;
+}
+
+a:link {
+    color: #202020;
+}
+a:visited {
+    color: #202020;
+}
+a:hover {
+    color: #4E4E4E;
+}
+a:active {
+    color: #4E4E4E;
+}
+
+.offer-top {
+	margin-top: 80px;
 }
 
 #container {
@@ -17,11 +35,11 @@ html, body {
 }
 
 .side-left {
+	position: fixed;
 	overflow: hidden;
 	background-image: url(/doi-pui.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-color: #555;
 
 	height: 100%;
 	.img-bg {
@@ -31,69 +49,162 @@ html, body {
        	max-height:100%;;
 		opacity: 0.2;		
 	}
+
+	.wrap-pic-logo {
+		position: relative;
+		width: 100%;
+		height: auto;				
+		/*background-color: blue;*/
+			.pic-logo {
+				position: relative;
+				margin-top: 25px;
+				left: 50%;
+				margin-left: -70px;
+				width: 140px;
+				/*background-color: red;*/
+					img {
+						width: 100%;
+						/*border: 6px solid #1ABC9C;*/
+	    				border-radius: 50%;	
+	    				opacity: 1.0;	
+	    				/*box-shadow: 1px 1px 1px black;				*/
+					}
+			}					
+	}
+
+	.wrap-text-logo {
+		width: 100%;
+		margin-top: 15px;
+		height: auto;				
+		/*background-color: green;*/
+
+		font-weight: bold;
+		color: #3C3C3C;
+		text-align: center;
+		font-size: 2.5em;
+		font-family: 'Pacifico', cursive;
+		text-shadow: 1px 1px 2px #555;
+			.text1 {
+				text-align: center;
+				font-size: 20px;
+				margin-top: 20px;
+				color: #626262;				
+				font-family: 'PT Sans', sans-serif;
+			}
+			.text2 {
+				/*background-color: red;*/
+				.text1;
+				cursor: pointer;
+				font-size: 1em;
+					a{
+						margin-left: 8px;
+					}
+			}
+	}
+
+	.author {
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+		font-family: "PT Sans", Helvetica, Arial, sans-serif;
+		color: #A0A0A0;
+		font-size: 12px;
+	}
 }
 
-.wrap-pic-logo {
+.side-right {
 	position: relative;
-	width: 100%;
-	height: auto;				
-	/*background-color: blue;*/
-		.pic-logo {
-			position: relative;
-			margin-top: 25px;
-			left: 50%;
-			margin-left: -70px;
-			width: 140px;
-			/*background-color: red;*/
-				img {
-					width: 100%;
-					/*border: 6px solid #1ABC9C;*/
-    				border-radius: 50%;	
-    				opacity: 1.0;	
-    				/*box-shadow: 1px 1px 1px black;				*/
-				}
-		}					
+	height: auto;
+	padding: 50px 80px 50px 80px;
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+
+		p {
+			img {
+				max-width: 100%;
+			}
+		}
 }
 
-.wrap-text-logo {
-	position: relative;
-	width: 100%;
-	margin-top: 15px;
-	height: auto;				
-	/*background-color: green;*/
-
+.post-title {
 	font-weight: bold;
-	color: #2C3E50;
-	text-align: center;
-	font-size: 2.5em;
-	font-family: 'Pacifico', cursive;
-	/*text-shadow: 1px 1px 20px #555;*/
+	color: #202020;
+	text-shadow: 1px 1px 1px #555;
+}
+
+.post-topic {
+	.post-title;
+	/*margin-left: 15px;*/
+}
+
+.post-date {
+	color: #9a9a9a;
+	font-size: 20px;
+}
+
+.post-content {
+	/*margin-left: 15px;*/
+	font-size: 18px;
+	padding-left: 15px;
+
+	a:link {
+	    color: #1E8BC3;
+	}
+	a:visited {
+	    color: #1E8BC3;
+	}
+	a:hover {
+	    color: #4E4E4E;
+	}
+	a:active {
+	    color: #4E4E4E;
+	}		
+}
+
+ul li {
+	font-size: 18px;
+	a:link {
+	    color: #1E8BC3;
+	}
+	a:visited {
+	    color: #1E8BC3;
+	}
+	a:hover {
+	    color: #4E4E4E;
+	}
+	a:active {
+	    color: #4E4E4E;
+	}
+}
+
+p {
+	img {
+		box-shadow: 1px 1px 10px black;
+	}
 }
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media (max-width: @screen-xs-min) {  
-/*	.side-left {
-		.img-bg {
-			left: 0px;	
-		}
-	}*/
+	.side-left {
+		position: relative;
+	}
+	.side-right {
+		padding: 30px 20px 30px 20px;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) {  
-	
+	.side-right {
+		padding: 30px 40px 30px 40px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {  
-	/*.wrap-pic-logo {
-		.pic-logo {
-			left: 50%;
-			margin-left: -17.5%;
-			width: 80%;
-		}
-	}*/
+	.side-right {
+		padding: 40px 60px 40px 60px;
+	}
 }
 
 /* Large devices (large desktops, 1200px and up) */
